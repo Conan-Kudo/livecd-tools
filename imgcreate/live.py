@@ -253,7 +253,8 @@ class LiveImageCreatorBase(LoopImageCreator):
     def _create_bootconfig(self):
         """Configure the image so that it's bootable."""
         self._configure_bootloader(self.__ensure_isodir())
-        self._generate_efiboot(self.__ensure_isodir())
+        # TODO: Support EFI boot on Mageia
+        #self._generate_efiboot(self.__ensure_isodir())
 
     def _get_post_scripts_env(self, in_chroot):
         env = LoopImageCreator._get_post_scripts_env(self, in_chroot)
